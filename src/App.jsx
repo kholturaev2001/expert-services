@@ -127,38 +127,6 @@ import RedevelopmentCoordination from "./pages/Services/LegalService/Redevelopme
 import EnterpriseFinancialAndEconomicActivitiesAnalysis from "./pages/Services/BusinessPlanning/EnterpriseFinancialAndEconomicActivitiesAnalysis";
 import BusinessPlanDevelopment from "./pages/Services/BusinessPlanning/BusinessPlanDevelopment";
 import Prices from "./pages/Prices";
-// import TechnicalTranslation from "./pages/Services/Translating/TechnicalTranslation";
-// import EconomicTextsTranslation from "./pages/Services/Translating/EconomicTextsTranslation";
-// import FinancialTranslation from "./pages/Services/Translating/FinancialTranslation";
-// import ITTranslation from "./pages/Services/Translating/ITTranslation";
-// import LegalTranslation from "./pages/Services/Translating/LegalTranslation";
-// import MedicalTranslation from "./pages/Services/Translating/MedicalTranslation";
-// import LiteraryTranslation from "./pages/Services/Translating/LiteraryTranslation";
-// import PublicisticTranslation from "./pages/Services/Translating/PublicisticTranslation";
-// import AdvertisingTextsTranslation from "./pages/Services/Translating/AdvertisingTextsTranslation";
-// import PharmaceuticalTranslation from "./pages/Services/Translating/PharmaceuticalTranslation";
-// import ForNegotiationsTranslation from "./pages/Services/Translating/ForNegotiationsTranslation";
-// import ForExhibitionTranslation from "./pages/Services/Translating/ForExhibitionTranslation";
-// import ForMeetingsAndConferenceTranslation from "./pages/Services/Translating/ForMeetingsAndConferenceTranslation";
-// import DelegationAccompanying from "./pages/Services/Translating/DelegationAccompanying";
-// import NotarialActionsTranslation from "./pages/Services/Translating/NotarialActionsTranslation";
-// import InProductionTranslation from "./pages/Services/Translating/InProductionTranslation";
-// import GuideInterpreter from "./pages/Services/Translating/GuideInterpreter";
-// import SynchronicTranslation from "./pages/Services/Translating/SynchronicTranslation";
-// import SpecificTranslation from "./pages/Services/Translating/SpecificTranslation";
-// import PassportTranslation from "./pages/Services/Translating/PassportTranslation";
-// import DriversLicensesAndPtsTranslation from "./pages/Services/Translating/DriversLicensesAndPtsTranslation";
-// import SealsAndApostillesTranslation from "./pages/Services/Translating/SealsAndApostillesTranslation";
-// import ReferencesCertificatesTranslation from "./pages/Services/Translating/ReferencesCertificatesTranslation";
-// import DepartureOfChildConsentsTranslationAndNotarization from "./pages/Services/Translating/DepartureOfChildConsentsTranslationAndNotarization";
-// import CertificatesAndApplicationsTranslation from "./pages/Services/Translating/CertificatesAndApplicationsTranslation";
-// import DiplomasAndApplicationsTranslation from "./pages/Services/Translating/DiplomasAndApplicationsTranslation";
-// import TranscriptsTranslation from "./pages/Services/Translating/TranscriptsTranslation";
-// import CorporateDocumentsTranslation from "./pages/Services/Translating/CorporateDocumentsTranslation";
-// import BirthCertificateApostilleTranslation from "./pages/Services/Translating/BirthCertificateApostilleTranslation";
-// import ContractsAndApplicationsTranslation from "./pages/Services/Translating/ContractsAndApplicationsTranslation";
-// import DocumentTranslationServices from "./pages/Services/Translating/DocumentTranslationServices";
-// import NotaryServices from "./pages/Services/Translating/NotaryServices";
 
 function App() {
   const {consultModal} = useSelector(state => state.app)

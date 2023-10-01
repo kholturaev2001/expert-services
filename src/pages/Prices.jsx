@@ -4,6 +4,7 @@ import HeadBreadcrumb from "../components/HeadBreadcrumb";
 import Title from "../components/Typography/Title";
 import Title2Colored from "../components/Typography/Title2Colored";
 import TitleColored from "../components/Typography/TitleColored";
+import YandexMap from "../components/YandexMap";
 
 const Prices = () => {
   return (
@@ -1424,6 +1425,7 @@ const Prices = () => {
             ]}
           />
         </div>
+        <YandexMap />
       </div>
       <Footer />
     </>

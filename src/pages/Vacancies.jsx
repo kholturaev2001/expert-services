@@ -1,82 +1,417 @@
-import house1 from "../assets/images/house1.jpg";
-import house2 from "../assets/images/house2.jpg";
-import house3 from "../assets/images/house3.jpg";
-import house4 from "../assets/images/house4.jpg";
-import house5 from "../assets/images/house5.jpg";
-import house6 from "../assets/images/bg_2.png";
-import house7 from "../assets/images/bg_3.png";
-import house8 from "../assets/images/house6.png";
-import house9 from "../assets/images/house7.png";
-import house10 from "../assets/images/house8.png";
 import { useState } from "react";
+import estates_valuation_expert from "../assets/images/services/valuation/estates/apartments_valuation.jpeg";
+import business_expert from "../assets/images/services/valuation/valuation_aims/business_for_inheritance_valuation.jpeg";
+import estate_valuation_expert from "../assets/images/services/valuation/valuation_aims/real_estate_for_court_valuation.jpeg";
+import car_valuation_expert from "../assets/images/services/valuation/transport/car_valuation.jpeg";
+import intangible_assets_valuation from "../assets/images/services/valuation/intangible_assets/mutual_investment_funds_valuation.jpeg";
+import handwriting_expert from "../assets/images/services/expertise/handwriting_expert.jpeg";
 import Card from "../components/Card/Card";
 import BackBtn from "../components/BackBtn";
 import Footer from "../components/Footer";
-import Carousel from "../components/Carousel";
 import Title2 from "../components/Typography/Title2";
 import Title from "../components/Typography/Title";
 import Description from "../components/Typography/Description";
 import Ul from "../components/Typography/Ul";
 import Email from "../components/Typography/Email";
 import HeadBreadcrumb from "../components/HeadBreadcrumb";
+import Title3 from "./../components/Typography/Title3";
+import YandexMap from "./../components/YandexMap";
+import Ol from "./../components/Typography/Ol";
 
 const data = [
   {
-    swiperImages: [house1, house2, house3, house5, house6, house7], // ADD AT LEAST 3 IMAGES
-    title: "Название вакансии 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: estates_valuation_expert,
+    title: "Эксперт по оценке недвижимости",
+    responsibilities: (
+      <Ol>
+        <li>
+          Проведение оценки коммерческой и жилой недвижимости в соответствии с
+          применимыми законодательными и профессиональными стандартами.
+        </li>
+        <li>
+          Сбор и анализ информации о рынке недвижимости, включая цены на
+          аналогичные объекты и их характеристики.
+        </li>
+        <li>
+          Оценка физического состояния объектов недвижимости, включая
+          строительные и технические параметры.
+        </li>
+        <li>
+          Подготовка подробных отчетов об оценке, включая описание методологии,
+          использованных данных и оценочных расчетов.
+        </li>
+        <li>
+          Взаимодействие с клиентами и предоставление объяснений и рекомендаций
+          по оценке недвижимости.
+        </li>
+        <li>
+          Соблюдение сроков выполнения заказов и контроль над качеством
+          проведенной оценки.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Высшее образование в области недвижимости, строительства, финансов или
+          экономики.
+        </li>
+        <li>
+          Опыт работы в оценке недвижимости, предпочтительно не менее 3 лет.
+        </li>
+        <li>
+          Глубокие знания региональных рынков недвижимости и текущих тенденций.
+        </li>
+        <li>
+          Понимание методологии оценки недвижимости и знание соответствующих
+          нормативных документов.
+        </li>
+        <li>
+          Опыт работы с оценочным программным обеспечением и инструментами.
+        </li>
+        <li>Аналитические навыки и умение работать с данными.</li>
+        <li>Отличные коммуникативные и письменные навыки.</li>
+        <li>Способность работать самостоятельно и в команде.</li>
+        <li>Знание английского языка (предпочтительно).</li>
+      </Ul>
+    ),
+    moreInfo:
+      "Эта вакансия предоставляет возможность работать в профессиональной команде экспертов по оценке недвижимости и развивать свои навыки в этой области. Мы ищем кандидатов, готовых внести ценный вклад в нашу компанию и обеспечить точные и надежные оценки недвижимости для наших клиентов.",
   },
   {
-    swiperImages: [house3, house4, house5, house6, house7, house1, house2],
-    title: "Название вакансии 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: business_expert,
+    title: "Бизнес-оценщик",
+    responsibilities: (
+      <Ol>
+        <li>
+          Проведение оценки финансовой устойчивости и стоимости
+          бизнес-предприятий и проектов.
+        </li>
+        <li>
+          Анализ финансовых отчетов, бизнес-планов и прогнозов для определения
+          стоимости бизнеса.
+        </li>
+        <li>
+          Изучение рынка и конкурентной среды для оценки места бизнеса в
+          отрасли.
+        </li>
+        <li>
+          Оценка нематериальных активов, интеллектуальной собственности и
+          брендов.
+        </li>
+        <li>Выявление факторов риска и возможных улучшений в бизнес-модели.</li>
+        <li>
+          Подготовка подробных отчетов об оценке, включая методологию и расчеты.
+        </li>
+        <li>
+          Взаимодействие с клиентами для обсуждения результатов и предоставления
+          рекомендаций.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Высшее образование в области финансов, экономики,
+          бизнес-администрирования или смежной области.
+        </li>
+        <li>
+          Опыт работы в сфере бизнес-оценки, предпочтительно не менее 3 лет.
+        </li>
+        <li>
+          Глубокие знания в области финансового анализа и оценки стоимости
+          бизнеса.
+        </li>
+        <li>Умение анализировать финансовые отчеты и составлять прогнозы.</li>
+        <li>
+          Знание методологии оценки нематериальных активов и интеллектуальной
+          собственности.
+        </li>
+        <li>
+          Опыт использования соответствующего программного обеспечения и
+          инструментов.
+        </li>
+        <li>Аналитические и коммуникативные навыки.</li>
+        <li>Способность к самостоятельной работе и принятию решений.</li>
+        <li>Знание английского языка (предпочтительно).</li>
+      </Ul>
+    ),
+    moreInfo:
+      "Эта вакансия предоставляет возможность работать в сфере оценки бизнеса, где ваш аналитический и финансовый опыт будут цениться и помогут клиентам принимать важные бизнес-решения. Мы ищем кандидатов, способных проводить точные и надежные оценки стоимости бизнеса и предоставлять ценные рекомендации.",
   },
   {
-    swiperImages: [house10, house6, house7, house1, house2, house3, house4],
-    title: "Название вакансии 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: estate_valuation_expert,
+    title: "Судебный эксперт по оценке имущества",
+    responsibilities: (
+      <Ol>
+        <li>
+          Проведение экспертизы и оценки имущества в рамках судебных дел и
+          споров.
+        </li>
+        <li>
+          Изучение судебных материалов, документов и фактов, связанных с
+          оцениваемым имуществом.
+        </li>
+        <li>
+          Подготовка экспертных заключений и отчетов, содержащих информацию о
+          стоимости имущества и методологию оценки.
+        </li>
+        <li>
+          Участие в судебных заседаниях и предоставление экспертных пояснений и
+          свидетельских показаний при необходимости.
+        </li>
+        <li>
+          Сотрудничество с адвокатами, судьями и другими сторонами по делу для
+          разрешения вопросов, связанных с оценкой имущества.
+        </li>
+        <li>
+          Соблюдение всех судебных процедур и требований, связанных с
+          экспертизой.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Высшее образование в области оценки, экспертизы, юриспруденции или
+          смежной области.
+        </li>
+        <li>
+          Лицензия или сертификация судебного эксперта (если применимо в вашем
+          регионе).
+        </li>
+        <li>
+          Опыт работы в качестве судебного эксперта или оценщика имущества,
+          предпочтительно не менее 3 лет.
+        </li>
+        <li>
+          Глубокие знания в области законодательства, регулирующего судебные
+          экспертизы и оценки.
+        </li>
+        <li>
+          Умение работать с доказательствами, судебными материалами и правовой
+          документацией.
+        </li>
+        <li>
+          Аналитические и исследовательские навыки для проведения точных и
+          объективных оценок.
+        </li>
+        <li>
+          Коммуникативные навыки и умение общаться с различными сторонами в
+          судебном процессе.
+        </li>
+        <li>
+          Способность работать под давлением и соблюдать сроки судебных
+          процедур.
+        </li>
+        <li>Этичность и надежность в проведении судебных экспертиз.</li>
+      </Ul>
+    ),
+    moreInfo:
+      "Эта вакансия предоставляет возможность работать важным звеном судебных процессов, обеспечивая нейтральные и профессиональные оценки имущества. Мы ищем кандидатов, готовых предоставлять объективные экспертные заключения и справедливую оценку имущества в судебных делах.",
   },
   {
-    swiperImages: [
-      house5,
-      house6,
-      house7,
-      house1,
-      house2,
-      house3,
-      house4,
-      house8,
-    ],
-    title: "Название вакансии 4",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: car_valuation_expert,
+    title: "Технический эксперт по оценке автотранспорта",
+    responsibilities: (
+      <Ol>
+        <li>
+          Проведение экспертизы технического состояния автотранспорта в
+          соответствии с профессиональными стандартами и методологией оценки.
+        </li>
+        <li>
+          Осмотр, анализ и оценка физического состояния автомобилей, включая
+          механические, электронные и кузовные параметры.
+        </li>
+        <li>
+          Определение рыночной стоимости автотранспортных средств на основе
+          характеристик, возраста и текущих рыночных трендов.
+        </li>
+        <li>
+          Подготовка детальных отчетов об оценке, включая описание методологии,
+          примененных данных и фотографии.
+        </li>
+        <li>
+          Консультация клиентов и предоставление объяснений и рекомендаций по
+          результатам оценки.
+        </li>
+        <li>
+          Участие в судебных процессах в качестве эксперта по оценке
+          автотранспорта при необходимости.
+        </li>
+        <li>
+          Соблюдение всех профессиональных и этических стандартов при проведении
+          оценок.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Техническое образование в области автомобильной техники, механики или
+          смежной области.
+        </li>
+        <li>
+          Опыт работы в оценке автотранспорта, предпочтительно не менее 3 лет.
+        </li>
+        <li>
+          Глубокие знания в области автомобильных технологий, включая
+          механические, электронные и кузовные аспекты.
+        </li>
+        <li>Знание текущих трендов и цен на автомобильный рынок.</li>
+        <li>
+          Опыт использования специализированного оборудования и программного
+          обеспечения для оценки автотранспорта.
+        </li>
+        <li>Аналитические навыки и внимание к деталям.</li>
+        <li>
+          Коммуникативные навыки и способность объяснять сложные технические
+          аспекты клиентам.
+        </li>
+        <li>
+          Готовность к работе в судебных процессах и предоставлению экспертных
+          заключений.
+        </li>
+        <li>
+          Соблюдение высоких стандартов профессиональной этики и надежности.
+        </li>
+      </Ul>
+    ),
+    moreInfo:
+      "Эта вакансия предоставляет возможность работать в области оценки автотранспорта, где ваш технический опыт и аналитические навыки будут цениться при определении стоимости автомобилей и другой техники. Мы ищем кандидатов, способных предоставлять точные и объективные оценки автотранспорта и обеспечивать высокий уровень профессиональной службы для наших клиентов.",
   },
   {
-    swiperImages: [house9, house8, house5, house6, house7, house1, house2],
-    title: "Название вакансии 5",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: intangible_assets_valuation,
+    title: "Эксперт по оценке нематериальных активов",
+    responsibilities: (
+      <Ol>
+        <li>
+          Проведение оценки нематериальных активов, таких как патенты, торговые
+          марки, авторские права, лицензии, бренды и прочие интеллектуальные
+          собственности.
+        </li>
+        <li>
+          Исследование и анализ юридических документов и прав на нематериальные
+          активы.
+        </li>
+        <li>
+          Определение рыночной стоимости нематериальных активов с использованием
+          соответствующих методов и стандартов оценки.
+        </li>
+        <li>
+          Подготовка подробных отчетов об оценке, включая методологию,
+          использованные данные и оценочные расчеты.
+        </li>
+        <li>
+          Консультирование клиентов по вопросам оценки нематериальных активов и
+          предоставление рекомендаций.
+        </li>
+        <li>
+          Участие в судебных процессах в качестве эксперта по оценке
+          нематериальных активов при необходимости.
+        </li>
+        <li>
+          Соблюдение всех профессиональных и этических стандартов при проведении
+          оценок.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Высшее образование в области финансов, экономики, юриспруденции,
+          интеллектуальной собственности или смежной области.
+        </li>
+        <li>
+          Опыт работы в оценке нематериальных активов, предпочтительно не менее
+          3 лет.
+        </li>
+        <li>
+          Глубокие знания в области интеллектуальной собственности и юридических
+          аспектов оценки.
+        </li>
+        <li>Знание методологии и стандартов оценки нематериальных активов.</li>
+        <li>
+          Аналитические и исследовательские навыки для точного определения
+          стоимости активов.
+        </li>
+        <li>
+          Коммуникативные навыки и способность объяснить сложные аспекты оценки
+          клиентам.
+        </li>
+        <li>
+          Готовность к работе в судебных процессах и предоставлению экспертных
+          заключений.
+        </li>
+        <li>Способность работать самостоятельно и соблюдать сроки.</li>
+      </Ul>
+    ),
+    moreInfo:
+      "Эта вакансия предоставляет возможность работать в области оценки нематериальных активов, где ваша экспертиза и профессионализм будут востребованы для определения стоимости интеллектуальной собственности и других нематериальных активов. Мы ищем кандидатов, способных предоставлять точные и надежные оценки, спроектированные в соответствии с высокими профессиональными стандартами.",
   },
   {
-    swiperImages: [house1, house8, house5, house6, house7, house2],
-    title: "Название вакансии 6",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
-  },
-  {
-    swiperImages: [house2, house8, house5, house6, house7],
-    title: "Название вакансии 7",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
-  },
-  {
-    swiperImages: [house7, house1, house2, house3, house4, house8],
-    title: "Название вакансии 8",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: handwriting_expert,
+    title: "Почерковед",
+    responsibilities: (
+      <Ol>
+        <li>
+          Проведение почерковедческих исследований и анализа рукописных
+          документов.
+        </li>
+        <li>
+          Идентификация и сравнительный анализ почерка, подписей и письменных
+          текстов.
+        </li>
+        <li>Оценка подлинности и целостности документов и подписей.</li>
+        <li>
+          Подготовка экспертных заключений и отчетов о результатах
+          почерковедческих исследований.
+        </li>
+        <li>
+          Участие в судебных процессах в качестве эксперта по почерку и
+          предоставление свидетельских показаний при необходимости.
+        </li>
+        <li>
+          Консультации клиентов и адвокатов по вопросам почерковедческой
+          экспертизы.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Высшее образование в области криминалистики, юриспруденции,
+          лингвистики или смежной области.
+        </li>
+        <li>
+          Опыт работы в области почерковедения и экспертизы почерка,
+          предпочтительно не менее 3 лет.
+        </li>
+        <li>
+          Глубокие знания в области почерковедческих методов и техник анализа
+          рукописей.
+        </li>
+        <li>
+          Умение работать с различными видами письменных текстов и документов.
+        </li>
+        <li>Аналитические навыки и внимание к деталям.</li>
+        <li>
+          Знание юридических аспектов почерковедческой экспертизы и правовой
+          системы.
+        </li>
+        <li>
+          Коммуникативные навыки и способность объяснить сложные аспекты
+          клиентам и участникам судебных процессов.
+        </li>
+        <li>
+          Готовность к работе в судебных процессах и предоставлению экспертных
+          заключений.
+        </li>
+        <li>Способность работать самостоятельно и соблюдать сроки.</li>
+      </Ul>
+    ),
+    moreInfo:
+      "Эта вакансия предоставляет возможность работать как часть судебного процесса, предоставляя экспертные анализы почерка и подписей. Мы ищем кандидатов, готовых предоставлять объективные и профессиональные почерковедческие анализы для решения судебных и правовых вопросов.",
   },
 ];
 
@@ -91,7 +426,7 @@ const Vacancies = () => {
       <div className="flex flex-wrap md:gap-7 gap-4 justify-center">
         {data.map((elem, id) => (
           <Card
-            img={elem.swiperImages[0]}
+            img={elem.image}
             key={id}
             title={elem.title}
             elem={elem}
@@ -100,25 +435,48 @@ const Vacancies = () => {
         ))}
       </div>
     ) : (
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-6 md:mx-3">
         <BackBtn onClick={() => setCurrentProject("all")}>
           Назад ко всем вакансиям
         </BackBtn>
         <div className="flex flex-col">
-          <Carousel data={currentProject.swiperImages} />
-          <p className="md:text-[35px] text-[24px] font-semibold my-4">
-            {currentProject.title}
-          </p>
-          <p className="md:text-base text-sm md:text-start text-justify">
-            {currentProject.description}
-          </p>
+          <Title>
+            Вакансия: <i>{currentProject.title}</i>
+          </Title>
+          <div className="p-3 rounded-md md:max-w-[1000px] flex flex-col gap-3 max-w-[100%] border border-[#33a3ed] bg-gray-100">
+            <Title3>Обязанности:</Title3>
+            {currentProject.responsibilities}
+            <Title3>Требования:</Title3>
+            {currentProject.demands}
+            <Title3>Условия:</Title3>
+            <Ul>
+              <li>Оформление по ТК РФ (полное соблюдение);</li>
+              <li>Конкурентоспособная зарплата: оклад + % от продаж ;</li>
+              <li>Своевременные выплаты 2 раза в месяц;</li>
+              <li>Перспектива роста до руководителя группы менеджеров;</li>
+              <li>График работы: понедельник-пятница с 9:00 до 18:00;</li>
+            </Ul>
+            {currentProject.moreInfo && (
+              <Description>
+                <i className="font-medium">{currentProject.moreInfo}</i>
+              </Description>
+            )}
+            <Description>
+              <i className="font-medium">
+                Если вы хотите предложить свою кандидатуру - напишите нам о себе
+                на <Email />
+              </i>
+            </Description>
+          </div>
+          <br />
+          <YandexMap />
         </div>
       </div>
     );
 
   return (
     <div className="flex flex-col text-start">
-      <div className="flex flex-col gap-2  md:max-w-[1280px] md:mx-auto mx-3">
+      <div className="flex flex-col gap-2  md:max-w-[1000px] md:mx-auto mx-3">
         <HeadBreadcrumb
           items={[
             {
