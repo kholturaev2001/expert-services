@@ -1,3 +1,4 @@
+import { Modal } from "antd";
 import { Route, Routes } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -6,7 +7,6 @@ import Main from "./pages/Main";
 import Navbar from "./components/Navbar/Navbar";
 import Vacancies from "./pages/Vacancies";
 import Contacts from "./pages/Contacts";
-import { Modal } from "antd";
 import Consultation from "./components/Consultation/Consultation";
 import BackBtn from "./components/BackBtn";
 import Services from "./components/Services";
