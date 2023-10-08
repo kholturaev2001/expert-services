@@ -9,10 +9,10 @@ import Title2 from "../../../components/Typography/Title2";
 const ComputerValuation = () => {
   return (
     <div>
-<HeadBreadcrumb
+      <HeadBreadcrumb
         items={[
           {
-            title: 'Главная'
+            title: "Главная",
           },
           {
             title: "Оценка",

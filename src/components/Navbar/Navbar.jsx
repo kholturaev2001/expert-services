@@ -180,6 +180,7 @@ const items = [
       getItem("Оценка оргтехники", "/services/office_equipment_valuation"),
       getItem("Оценка оружия", "/services/weapon_valuation"),
       getItem("Оценка компьютеров", "/services/computer_valuation"),
+      getItem("Оценка телефонов", "/services/phone_valuation"),
       getItem(
         "Оценка бытовой техники",
         "/services/household_appliances_valuation"
@@ -367,7 +368,7 @@ const items = [
     getItem("Лингвистическая экспертиза", "/services/linguistic_expert"),
     getItem("Фоноскопическая экспертиза", "/services/phonoscopic_expert"),
     getItem(
-      "Компьютерно-етническая экспертиза",
+      "Компьютерно-этническая экспертиза",
       "/services/computer_and_technical_expert"
     ),
     getItem(

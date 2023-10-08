@@ -127,6 +127,7 @@ import RedevelopmentCoordination from "./pages/Services/LegalService/Redevelopme
 import EnterpriseFinancialAndEconomicActivitiesAnalysis from "./pages/Services/BusinessPlanning/EnterpriseFinancialAndEconomicActivitiesAnalysis";
 import BusinessPlanDevelopment from "./pages/Services/BusinessPlanning/BusinessPlanDevelopment";
 import Prices from "./pages/Prices";
+import PhoneValuation from "./pages/Services/Valuation/PhoneValuation";
 
 function App() {
   const {consultModal} = useSelector(state => state.app)
@@ -279,6 +280,7 @@ function App() {
           />
           <Route path="weapon_valuation" element={<WeaponValuation />} />
           <Route path="computer_valuation" element={<ComputerValuation />} />
+          <Route path="phone_valuation" element={<PhoneValuation />} />
           <Route
             path="household_appliances_valuation"
             element={<HouseholdAppliancesValuation />}
