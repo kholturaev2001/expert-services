@@ -31,8 +31,7 @@ const Footer = () => {
       <div className="md:max-w-[1280px] mx-auto w-full flex flex-col">
         <div className="md:max-w-[1280px] mx-auto w-full md:min-h-[240px] flex md:flex-row flex-col items-center justify-between px-4 ">
           <div className="flex md:flex-row flex-col md:gap-14 gap-2 md:items-center items-start w-full">
-          <div className="">
-
+          <div>
             <Logo color='white' />
           </div>
             <nav className="stroke flex md:flex-nowrap w-full flex-wrap md md:gap-7 font-medium text-white md:justify-start justify-between">
